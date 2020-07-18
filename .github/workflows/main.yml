@@ -1,0 +1,59 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Checkout Repo
+      uses: actions/checkout@master
+      #uses: actions/checkout@v2
+
+    - name: Run Jest
+      uses: stefanoeb/jest-action@1.0.2
+      
+    - name: compress-action
+      uses: Charlesworth/compress-action@1.0.0
+      with:
+        target-directory: 'js'
+
+    - name: Auto committing minified files
+      uses: stefanzweifel/git-auto-commit-action@v4.1.6
+      with:
+        commit_message: "Github Action: Auto Minified JS and CSS files"
+        branch: ${{ github.ref }}
+
+    - name: Make Code Badge
+      uses: shadowmoose/GHA-LoC-Badge@1.0.0
+      id: badge
+      with:
+        debug: true
+        directory: ./
+        badge: ./output/badge.svg
+        patterns: 'js/*.js'
+        ignore: 'node_modules'
+
+    - name: Print the output
+      run: |
+        echo "Scanned: ${{ steps.badge.outputs.counted_files }}";
+        echo "Line Count: ${{ steps.badge.outputs.total_lines }}";
+        
+    - name: Deploy to image-data branch
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        publish_dir: ./output
+        publish_branch: image-data
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+
+    - name: GitHub Action for JS Bundle Size
+      uses: mikeal/bundle-size-action@1.0.0
