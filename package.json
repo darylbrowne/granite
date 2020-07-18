@@ -1,0 +1,25 @@
+{
+  "name": "granite",
+  "version": "0.0.1",
+  "description": "Front-end library for rendering JSON into UI elements",
+  "main": "js/block.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "release": {
+    "branches": "release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darylbrowne/groundupgranite.git"
+  },
+  "author": "Daryl Browne and Jason Bean",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/darylbrowne/groundupgranite/issues"
+  },
+  "homepage": "https://github.com/darylbrowne/groundupgranite#readme",
+  "devDependencies": {
+    "jest": "^25.5.2"
+  }
+}

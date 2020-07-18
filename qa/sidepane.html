@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sidepane</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="https://addapptation.blob.core.windows.net/addapptation-stylesheets/fontawesome-pro-5.10.0-11-web/css/all.min.css">
+    <script src="../js/granite.js"></script>    
+  </head>
+  <body>
+    <div id='nav-granite' data-granite-block='{
+    "id": "nav-granite",
+    "feature": "navigation",
+    "records": [
+        {"href": "addappter-nav-test.html", "label": "Home", "icon": "fal fa-home"},
+        {"href": "addappter-table-test.html", "label": "Table", "icon": "fal fa-table"},
+        {"href": "https://teamaddapptation.github.io/granite/js/sidepane/sidepane.html", "label": "Sidepane", "icon": "fal fa-window-restore"},
+        {"href": "addappter-tabs-test.html", "label": "Tabs", "icon": "fal fa-layer-group"},
+        {"href": "addappter-form-test.html", "label": "Form", "icon": "fal fa-clipboard-list-check"},
+        {"label": "Libraries 1", "icon": "fal fa-toolbox", "submenu_header": true},
+            {"href": "#sign_out", "icon": "fal fa-sign-out", "label": "Sign Out", "submenu": true, "hide_if": "#{@hide_sign_out}"},
+            {"href": "#sign_in", "icon": "fal fa-sign-in", "label": "Sign In", "submenu": true},
+            {"href": "#calendar", "icon": "", "label": "Calendar", "submenu": true},
+        {"label": "Libraries 2", "icon": "fal fa-toolbox", "submenu_header": true},
+            {"href": "#architecture", "icon": "fal fa-sitemap", "label": "Architecture Architecture Architecture Architecture Architecture", "submenu": true},
+            {"href": "#credentials", "icon": "fal fa-unlock-alt", "label": "Credentials", "submenu": true},
+            {"href": "#design", "icon": "fal fa-palette", "label": "Design", "submenu": true},
+            {"href": "#schema_builder", "icon": "fal fa-folder-tree", "label": "Schema Builder", "submenu": true},
+            {"href": "#roadmap", "icon": "fal fa-map-marked", "label": "Roadmap", "submenu": true}
+        ],
+    "options": {
+      "font_color": "white",
+      "highlight": "#101010",
+      "single_submenu": true,
+      "hide_mobile_nav": false,
+      "header_label": "<span>addapptation</span>",
+      "header_image": "https://addapptation.blob.core.windows.net/logo/logo.png",
+      "header_link": "#test",
+      "wrap_logo": false,
+      "footer": "&copy; 2020 addapptation<br><a>Sign Out</a>",
+      "gradient": "linear-gradient(175deg, #ffb866 -5%, #ff8bcd 40%, #d44697 65%, #202020 96%)",
+      "topbar_gradient": "linear-gradient(to left, #ffb866 -5%, #ff8bcd 40%, #d44697 65%, #202020 96%)",
+      "hide_on": [],
+      "topbar_position": "center",
+      "item_height": "65px",
+      "menu": true,
+      "menu_items": [
+        {"label": "Menu Item Number 1", "icon": "search", "href": "#menu=1"},
+        {"label": "Menu Item Number 2", "icon": "clipboard", "href": "#menu=2"},
+        {"label": "Menu Item Number 3", "icon": "list", "href": "#menu=3"},
+        {"label": "Menu Item Number 4", "icon": "home", "href": "#menu=4"},
+        {"label": "Menu Item Number 5", "icon": "tools", "href": "#menu=5"},
+        {"label": "Menu Item Number 6", "icon": "hammer", "href": "#menu=6"}
+      ]
+    }
+  }'></div>
+
+  <body>
+    <div class="container">
+      <h1>Sidepane Test Page</h1>
+      <ul>
+        <li>
+          <a href="https://teamaddapptation.github.io/granite/" class="g__sidepane_link">Standard Side Pane</a>
+        </li>
+        <li>
+          <a href="../qa/sidepane/1.3.html" class="g__sidepane_link fullscreen" data-custom-close="Close Window">Fullscreen Side Pane (with custom close button)</a>
+        </li>
+        <li>
+          <a href="../qa/sidepane/1.1.html" class="g__bottompane_link fullscreen">Fullscreen Bottom Pane</a>
+        </li>
+        <li>
+          <a href="../qa/sidepane/1.2.html" class="g__bottompane_link" data-custom-close="Ok, Got It">Bottom Quarter (with custom close button)</a>
+        </li>
+        <li>
+          <a href="../qa/sidepane/1.5.html" class="g__sidepane_link" data-custom-close="Cancel">Form (with custom close button)</a>
+        </li>
+    </div>
+  </body>
+</body>
+</html>

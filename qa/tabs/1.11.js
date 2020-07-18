@@ -1,0 +1,48 @@
+{
+   "id":"db54f0c8dc65ed01ae0d",
+   "feature":"tabs",
+   "options":{
+      "visibility_settings":"",
+      "style":"4",
+      "classes":"",
+      "action":"hash_builder"
+   },
+   "records":[
+      {
+         "name":"Create Account",
+         "href":"/data_entry",
+         "addapptation_component":"true",
+         "addapptation_name":"Step",
+         "addapptation_type":"step",
+         "addapptation_code_id":"a0R1I000009UG67UAG",
+         "addapptation_id":"029156409183473775",
+         "addapptation_navigation":"",
+         "completed":"false",
+         "action":"hash_builder"
+      },
+      {
+         "name":"Add Contact",
+         "href":"/data_entry",
+         "addapptation_component":"true",
+         "addapptation_name":"Step",
+         "addapptation_type":"step",
+         "addapptation_code_id":"a0R1I000009UG67UAG",
+         "addapptation_id":"06585285214096632",
+         "addapptation_navigation":"",
+         "completed":"false",
+         "action":"hash_builder"
+      },
+      {
+         "name":"Log Interaction",
+         "href":"/data_entry",
+         "addapptation_component":"true",
+         "addapptation_name":"Step",
+         "addapptation_type":"step",
+         "addapptation_code_id":"a0R1I000009UG67UAG",
+         "addapptation_id":"04464902508375941",
+         "addapptation_navigation":"",
+         "completed":"false",
+         "action":"hash_builder"
+      }
+   ]
+}
